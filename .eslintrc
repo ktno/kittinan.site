@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "react-app",
+    "standard",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/standard"
+  ],
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "prettier",
+    "standard"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "new-cap": "off",
+    "no-unused-vars": "off",
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": ["warn", {
+      "extensions": [".js", ".jsx"] 
+    }],
+    "space-before-function-paren": "off"
+  }
+}

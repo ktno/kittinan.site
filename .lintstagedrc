@@ -1,0 +1,6 @@
+{
+  "*.+(js|jsx)": [
+    "npm run format:js"
+  ],
+  "*.+(css)": ["npm run format:css"]
+}

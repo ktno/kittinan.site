@@ -1,0 +1,91 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "React boilerplate for creating apps with React and Redux",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env CI=true react-scripts test",
+    "test:coverage": "npm run test -- --coverage",
+    "eject": "react-scripts eject",
+    "lint:js": "eslint . --ext .js",
+    "lint:css": "stylelint src/**/*.css --config .stylelintrc",
+    "format:js": "npm run lint:js -- --fix",
+    "format:css": "npm run lint:css -- --fix"
+  },
+  "author": "Kittinan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ktno/react-boilerplate"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "react-router",
+    "thunk",
+    "devtools",
+    "eslint",
+    "prettier",
+    "standard js",
+    "stylelint",
+    "lint",
+    "hot",
+    "reload",
+    "live",
+    "webpack",
+    "create-react-app",
+    "boilerplate",
+    "starter",
+    "husky",
+    "lint-staged"
+  ],
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.1",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@testing-library/user-event": "^10.0.0",
+    "bootstrap": "^4.4.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
+    "react-test-renderer": "^16.13.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react-redux": "^3.0.3",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-no-browser-hacks": "^1.2.1",
+    "typescript": "^3.8.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
