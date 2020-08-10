@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import * as actions from './actions'
-import { Div } from 'atomize'
+import { Div, Image } from 'atomize'
 
 const App = () => {
   
   return (
-    <>
-    </>
+    <Div>
+      <Image src='logo.png'/>
+    </Div>
   )
 }
 

@@ -6,9 +6,10 @@ import store from './store'
 import { Provider as StyletronProvider, DebugEngine } from 'styletron-react'
 import { Client as Styletron } from 'styletron-engine-atomic'
 import './index.css'
-import About from './pages/about'
-import Projects from './pages/projects'
-import Contact from './pages/contact'
+import Layout from './Layout'
+import About from './pages/About'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 
 const debug = process.env.NODE_ENV === 'production' ? void 0 : new DebugEngine()
 const engine = new Styletron() 
@@ -16,16 +17,18 @@ const engine = new Styletron()
 const rootElement = document.getElementById('root')
 const Root = () => (
   <Provider store={store}>
-    <Router>
-      <Switch>
-        <Redirect from='/' to='/about' exact/>
-        <StyletronProvider value={engine} debug={debug} debugAfterHydration>
-          <Route path='/about' component={About} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/contact' component={Contact} />
-        </StyletronProvider>
-      </Switch>
-    </Router>
+    <Layout>
+      <Router>
+        <Switch>
+          <Redirect from='/' to='/about' exact/>
+          <StyletronProvider value={engine} debug={debug} debugAfterHydration>
+            <Route path='/about' component={About} />
+            <Route path='/projects' component={Projects} />
+            <Route path='/contact' component={Contact} />
+          </StyletronProvider>
+        </Switch>
+      </Router>
+    </Layout>
   </Provider>
 )
 
