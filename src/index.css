@@ -1,0 +1,22 @@
+.headline {
+    font-family: 'Lovers Quarrel', cursive;
+    font-size: 72px;
+    font-weight: 300;
+}
+
+.heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.subheading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
