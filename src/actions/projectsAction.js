@@ -1,6 +1,6 @@
-import * as types from './constants'
+import { projectsConstant } from '../constants'
 
 export const setState = state => ({
-  type: types.SET_STATE,
+  type: projectsConstant.SET_STATE,
   state
 })

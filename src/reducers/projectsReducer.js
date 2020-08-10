@@ -1,4 +1,4 @@
-import * as types from './constants'
+import { projectsConstant } from '../constants'
 
 export const initialState = {
   state: 0
@@ -6,7 +6,7 @@ export const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.SET_STATE:
+    case projectsConstant.SET_STATE:
       return { state: action.state }
     default:
       return state

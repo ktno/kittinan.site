@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import * as actions from './actions'
+import { projectsAction } from '../../actions'
 import { Div } from 'atomize'
 
 const App = () => {
   
   return (
     <>
+      <h1>Projects</h1>
     </>
   )
 }

@@ -1,6 +1,6 @@
-import * as types from './constants'
+import { contactConstant } from '../constants'
 
 export const setState = state => ({
-  type: types.SET_STATE,
+  type: contactConstant.SET_STATE,
   state
 })

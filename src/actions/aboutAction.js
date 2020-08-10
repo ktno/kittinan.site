@@ -1,6 +1,6 @@
-import * as types from './constants'
+import { aboutConstant } from '../constants'
 
 export const setState = state => ({
-  type: types.SET_STATE,
+  type: aboutConstant.SET_STATE,
   state
 })
