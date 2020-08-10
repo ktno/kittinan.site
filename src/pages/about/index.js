@@ -8,6 +8,15 @@ const About = () => {
       <h1 className='headline'>I'm Kittinan,</h1>
       <h2 className='subheading'>a developer.</h2>
       <h3 className='heading'>About</h3>
+      <h1 className='headline'>I'm Kittinan,</h1>
+      <h2 className='subheading'>a developer.</h2>
+      <h3 className='heading'>About</h3>
+      <h1 className='headline'>I'm Kittinan,</h1>
+      <h2 className='subheading'>a developer.</h2>
+      <h3 className='heading'>About</h3>
+      <h1 className='headline'>I'm Kittinan,</h1>
+      <h2 className='subheading'>a developer.</h2>
+      <h3 className='heading'>About</h3>
     </>
   )
 }
