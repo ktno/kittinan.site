@@ -1,7 +1,8 @@
 .footer {
   background-color: #e0ebe8;
   height: 100px;
-  position: initial;
+  position: relative;
+  margin-top: 100px;
   bottom: 0;
   width: 100%;
   font-family: 'Raleway', sans-serif;
