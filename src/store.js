@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import { reducer as AppReducer } from './App/reducer'
+import * as reducers from './reducers'
 
 const rootReducer = combineReducers({
-  AppReducer
+  reducers
 })
 
 const composeEnhancers =

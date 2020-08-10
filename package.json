@@ -47,6 +47,7 @@
     "@testing-library/react": "^9.4.1",
     "@testing-library/react-hooks": "^3.2.1",
     "@testing-library/user-event": "^10.0.0",
+    "atomize": "^1.0.26",
     "bootstrap": "^4.4.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -54,8 +55,11 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.0",
     "react-test-renderer": "^16.13.0",
+    "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "styletron-engine-atomic": "^1.4.6",
+    "styletron-react": "^5.2.7"
   },
   "devDependencies": {
     "cross-env": "^7.0.0",
