@@ -1,0 +1,1 @@
+export const SET_POPULATION = 'SET_POPULATION'
