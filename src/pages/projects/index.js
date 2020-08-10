@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { projectsAction } from '../../actions'
-import { Div } from 'atomize'
 
-const App = () => {
-  
+const Projects = () => {
   return (
     <>
       <h1>Projects</h1>
@@ -12,4 +10,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Projects

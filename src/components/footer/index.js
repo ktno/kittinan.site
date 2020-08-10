@@ -1,12 +1,7 @@
 import React, { useEffect } from 'react'
-import { Div } from 'atomize'
 
-const App = () => {
-  
-  return (
-    <>
-    </>
-  )
+const Footer = () => {
+  return <></>
 }
 
-export default App
+export default Footer

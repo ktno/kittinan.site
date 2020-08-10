@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { contactAction } from '../../actions'
-import { Div } from 'atomize'
 
-const App = () => {
-  
+const Contact = () => {
   return (
     <>
       <h1>Contact</h1>
@@ -12,4 +10,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Contact
