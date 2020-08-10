@@ -1,1 +1,10 @@
-/* stylelint-disable */
+.footer {
+  background-color: #e0ebe8;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}

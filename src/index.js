@@ -18,16 +18,18 @@ import Contact from './pages/Contact'
 const rootElement = document.getElementById('root')
 const Root = () => (
   <Provider store={store}>
-    <Layout>
-      <Router>
-        <Switch>
-          <Redirect from='/' to='/about' exact />
+    <Router>
+      <Switch>
+        <Layout>
+          <Route path='/' exact>
+            <Redirect to='/about' />
+          </Route>
           <Route path='/about' component={About} />
           <Route path='/projects' component={Projects} />
           <Route path='/contact' component={Contact} />
-        </Switch>
-      </Router>
-    </Layout>
+        </Layout>
+      </Switch>
+    </Router>
   </Provider>
 )
 
