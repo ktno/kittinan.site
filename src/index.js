@@ -9,6 +9,7 @@ import {
 import { Provider } from 'react-redux'
 import store from './store'
 import './index.css'
+import './index.less'
 import Layout from './Layout'
 import About from './pages/About'
 import Projects from './pages/Projects'

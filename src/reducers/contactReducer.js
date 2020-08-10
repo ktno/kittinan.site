@@ -1,4 +1,4 @@
-import {contactConstant } from '../constants'
+import { contactConstant } from '../constants'
 
 export const initialState = {
   state: 0
