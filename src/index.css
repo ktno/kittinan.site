@@ -1,29 +1,20 @@
 /* @import '~antd/dist/antd.css'; */
-.html {
-  height: 100%;
-}
-
 .headline {
   font-family: 'Lovers Quarrel', cursive;
-  font-size: 72px;
-  font-weight: 300;
+  font-size: 72px !important;
+  font-weight: 300 !important;
 }
 
 .heading {
   font-family: 'Raleway', sans-serif;
-  font-size: 32px;
-  font-weight: 300;
+  font-size: 32px !important;
+  font-weight: 300 !important;
 }
 
 .subheading {
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
   font-weight: 300;
-}
-
-body {
-  position: relative;
-  height: 100%;
 }
 
 body,
@@ -38,7 +29,9 @@ li {
 
 .content {
   position: relative;
+  top: 200px;
+  margin-bottom: 200px;
   z-index: 0;
-  top: 100px;
-  bottom: 100px;
+  align-items: center;
+  justify-content: center;
 }
