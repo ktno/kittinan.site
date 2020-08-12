@@ -11,6 +11,7 @@ import html5 from '../../assets/images/html5.png'
 import jsx from '../../assets/images/jsx.png'
 import tuaton from '../../assets/images/tuaton.png'
 import tangerine from '../../assets/images/tangerine.png'
+import kmitl from '../../assets/images/kmitl.png'
 import './style.css'
 
 const About = () => {
@@ -214,7 +215,7 @@ const About = () => {
                 <Col>
                   <Row>
                     <Row align='middle'>
-                      <img className='company' src={tuaton} alt='tuaton'></img>
+                      <img className='logo' src={tuaton} alt='tuaton'></img>
                       <Title className='title' style={{ marginLeft: 10 }}>
                         Tuaton Co.,Ltd.
                       </Title>
@@ -287,7 +288,7 @@ const About = () => {
                   <Row>
                     <Row align='middle'>
                       <img
-                        className='company'
+                        className='logo'
                         src={tangerine}
                         alt='tangerine'
                       ></img>
@@ -348,6 +349,45 @@ const About = () => {
                 <Text className='text' style={{ paddingLeft: 25 }}>
                   Jun 2019 - Present | Bangkok, Thailand
                 </Text>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      {/* fifth section - education */}
+      <Row className='section' align='middle' justify='center'>
+        <Col span={24}>
+          <Title className='heading'>Education</Title>
+          <Row className='rectangle-container' align='center'>
+            <Col
+              xs={{ span: 20 }}
+              sm={{ span: 20 }}
+              md={{ span: 20 }}
+              lg={{ span: 16 }}
+              className='rectangle'
+            >
+              <Row>
+                <Col>
+                  <Row>
+                    <Row align='middle'>
+                      <img className='logo' src={kmitl} alt='kmitl'></img>
+                      <Title className='title' style={{ marginLeft: 10 }}>
+                        King Mongut's Institute of Technology Ladkrabang
+                      </Title>
+                    </Row>
+                    <Divider style={{ margin: 0 }} />
+                    <Col>
+                      <Row>
+                        <Text
+                          className='text'
+                          style={{ fontStyle: 'italic', marginTop: 25 }}
+                        >
+                          Bachelor of Engineer in Computer Engineering, 2019
+                        </Text>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Col>
               </Row>
             </Col>
           </Row>
