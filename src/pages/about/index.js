@@ -28,12 +28,7 @@ const About = () => {
           height: 'calc(100vh - 400px)'
         }}
       >
-        <Row
-          className='section'
-          style={{ marginTop: 0 }}
-          align='middle'
-          justify='center'
-        >
+        <Row className='section' align='middle' justify='center'>
           <Col span={24}>
             <Title
               className='headline'

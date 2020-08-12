@@ -44,7 +44,7 @@ li {
 .content {
   position: relative;
   top: 100px;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px) !important;
   z-index: 0;
   text-align: center;
 }
@@ -54,6 +54,10 @@ li {
   min-height: calc(100vh - 400px);
   width: 100%;
   margin-top: 100px;
+}
+
+.section:first-child {
+  margin-top: 0;
 }
 
 .section:last-child {
