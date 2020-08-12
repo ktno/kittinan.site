@@ -73,6 +73,30 @@ const About = () => {
           </Col>
         </Row>
       </div>
+      {/* second section - introduction */}
+      <Row className='section' align='middle' justify='center'>
+        <Col style={{ maxWidth: '390px' }}>
+          <Row align='middle' justify='center'>
+            <Avatar src={profile} size={140} />
+          </Row>
+          <Row style={{ marginTop: '50px' }}>
+            <Col>
+              <Row align='middle' justify='center'>
+                <Paragraph className='text' style={{ color: '#45b29a' }}>
+                  Hi.
+                </Paragraph>
+              </Row>
+              <Row align='middle' justify='center'>
+                <Paragraph className='text' style={{ color: '#45b29a' }}>
+                  I'm a software developer based in Bangkok, Thailand. I have a
+                  passion for software development and
+                  <b> I love to code because it is usable art</b>.
+                </Paragraph>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
   )
 }
 
