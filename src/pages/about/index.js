@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { aboutAction } from '../../actions'
-import { Row, Col, Typography, Avatar, Divider, Card } from 'antd'
+import React from 'react'
+import { Row, Col, Typography, Avatar, Divider } from 'antd'
 import cover from '../../assets/images/cover.png'
 import profile from '../../assets/images/profile.jpg'
 import javascript from '../../assets/images/javascript.png'
@@ -17,11 +15,6 @@ import './style.css'
 const About = () => {
   const { Title, Text, Paragraph } = Typography
   const roles = ['developer', 'learner', 'dreamer', 'gamer', 'cat lover']
-
-  useEffect(() => {
-    console.log(roles[0])
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [roles[0]])
 
   return (
     <Col className='content'>

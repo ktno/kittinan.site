@@ -43,6 +43,7 @@
     "lint-staged"
   ],
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
     "@craco/craco": "^5.6.4",
     "@testing-library/jest-dom": "^5.11.2",
     "@testing-library/react": "^9.5.0",

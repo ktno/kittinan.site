@@ -59,3 +59,14 @@ li {
 .section:last-child {
   margin-bottom: 200px;
 }
+
+.back-top {
+  width: 45px;
+  height: 45px;
+  font-size: 45px;
+  color: rgba(69, 178, 154, 1) !important;
+  position: fixed;
+  left: calc(50% - 22.5px);
+  bottom: 25px;
+  z-index: 1;
+}

@@ -8,12 +8,12 @@ import {
 } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store'
-import './index.css'
-import './index.less'
 import Layout from './Layout'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import './index.css'
+import './index.less'
 
 const rootElement = document.getElementById('root')
 const Root = () => (
