@@ -97,6 +97,47 @@ const About = () => {
           </Row>
         </Col>
       </Row>
+      {/* third section - skills */}
+      <Row className='section' justify='center'>
+        <Col span={24}>
+          <Title className='heading'>Skills</Title>
+          <Row align='center'>
+            <Col
+              xs={{ span: 20 }}
+              sm={{ span: 20 }}
+              md={{ span: 20 }}
+              lg={{ span: 16 }}
+              className='technology'
+            >
+              <Title className='title'>Javascript</Title>
+              <Divider style={{ margin: 0 }} />
+              <Row style={{ marginTop: 25 }}>
+                <Col className='tech-list'>
+                  <Row>
+                    <Avatar src={javascript} size={100} shape='square' />
+                  </Row>
+                  <Row align='center' style={{ marginTop: '10px' }}>
+                    <Text className='text' style={{ fontSize: '20px' }}>
+                      Javascript
+                    </Text>
+                  </Row>
+                </Col>
+                <Col className='tech-list'>
+                  <Row>
+                    <Avatar src={react} size={100} shape='square' />
+                  </Row>
+                  <Row align='center' style={{ marginTop: '10px' }}>
+                    <Text className='text' style={{ fontSize: '20px' }}>
+                      React
+                    </Text>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Col>
   )
 }
 

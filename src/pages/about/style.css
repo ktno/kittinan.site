@@ -1,4 +1,19 @@
-/* stylelint-disable */.role {
+.technology {
+  background-color: white;
+  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  padding: 25px;
+}
+
+.tech-list {
+  margin-left: 50px;
+}
+
+.tech-list:first-child {
+  margin-left: 0 !important;
+}
+
+.role {
   overflow: hidden;
   height: 37px;
 }
@@ -9,16 +24,16 @@
   justify-content: center;
 }
 
-.role_container:before {
+.role_container::before {
   /* content: '['; */
 }
 
-.role_container:after {
+.role_container::after {
   /* content: ']'; */
 }
 
-.role_container:after,
-:before {
+.role_container::after,
+::before {
   color: #16a085;
   animation-name: opacity;
   animation-duration: 4s;
@@ -26,7 +41,7 @@
 }
 
 .role_container_list {
-  padding: 0px;
+  padding: 0;
   animation-name: change;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -86,6 +101,7 @@
   91.66% {
     transform: translateY(10%);
   }
+
   /* 100% {
     transform: translateY();
   } */
