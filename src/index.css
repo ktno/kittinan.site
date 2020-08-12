@@ -4,6 +4,7 @@
   font-size: 100px !important;
   font-weight: 300 !important;
   color: white !important;
+  margin-bottom: 0 !important;
 }
 
 .heading {
@@ -11,6 +12,7 @@
   font-size: 32px !important;
   font-weight: 500 !important;
   color: rgba(41, 104, 90, 1) !important;
+  margin-bottom: 0 !important;
 }
 
 .subheading {
@@ -18,18 +20,21 @@
   font-size: 24px !important;
   font-weight: 400 !important;
   color: white !important;
+  margin-bottom: 0 !important;
 }
 
 .title {
   font-family: 'Raleway', sans-serif;
   font-size: 28px !important;
   font-weight: 400 !important;
+  margin-bottom: 0 !important;
 }
 
 .text {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-weight: 400 !important;
+  margin-bottom: 0 !important;
 }
 
 li {
@@ -46,7 +51,7 @@ li {
 
 .section {
   /* background-color: lightslategrey; */
-  height: calc(100vh - 400px);
+  min-height: calc(100vh - 400px);
   width: 100%;
   margin-top: 100px;
 }
