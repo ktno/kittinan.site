@@ -1,8 +1,16 @@
 .technology {
   background-color: white;
   box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.2);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(207, 207, 196, 0.5);
   text-align: left;
   padding: 25px;
+  height: 270px;
+}
+
+.technology-container {
+  margin-bottom: 25px;
 }
 
 .tech-list {
@@ -11,6 +19,13 @@
 
 .tech-list:first-child {
   margin-left: 0 !important;
+}
+
+.tech-list-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-position: 50% 50%;
 }
 
 .role {

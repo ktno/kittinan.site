@@ -6,6 +6,9 @@ import cover from '../../assets/images/cover.png'
 import profile from '../../assets/images/profile.jpg'
 import javascript from '../../assets/images/javascript.png'
 import react from '../../assets/images/react.png'
+import nodejs from '../../assets/images/nodejs.png'
+import html5 from '../../assets/images/html5.png'
+import jsx from '../../assets/images/jsx.png'
 import './style.css'
 
 const About = () => {
@@ -101,7 +104,7 @@ const About = () => {
       <Row className='section' justify='center'>
         <Col span={24}>
           <Title className='heading'>Skills</Title>
-          <Row align='center'>
+          <Row className='technology-container' align='center'>
             <Col
               xs={{ span: 20 }}
               sm={{ span: 20 }}
@@ -109,29 +112,85 @@ const About = () => {
               lg={{ span: 16 }}
               className='technology'
             >
-              <Title className='title'>Javascript</Title>
-              <Divider style={{ margin: 0 }} />
-              <Row style={{ marginTop: 25 }}>
-                <Col className='tech-list'>
-                  <Row>
-                    <Avatar src={javascript} size={100} shape='square' />
-                  </Row>
-                  <Row align='center' style={{ marginTop: '10px' }}>
-                    <Text className='text' style={{ fontSize: '20px' }}>
-                      Javascript
-                    </Text>
-                  </Row>
-                </Col>
-                <Col className='tech-list'>
-                  <Row>
-                    <Avatar src={react} size={100} shape='square' />
-                  </Row>
-                  <Row align='center' style={{ marginTop: '10px' }}>
-                    <Text className='text' style={{ fontSize: '20px' }}>
-                      React
-                    </Text>
-                  </Row>
-                </Col>
+              <Row>
+                <Title className='title'>Javascript</Title>
+                <Divider style={{ margin: 0 }} />
+                <Row style={{ marginTop: 25 }}>
+                  <Col className='tech-list'>
+                    <Row>
+                      <img
+                        className='tech-list-img'
+                        src={javascript}
+                        alt='javascript'
+                      />
+                    </Row>
+                    <Row align='center' style={{ marginTop: '10px' }}>
+                      <Text className='text' style={{ fontSize: '20px' }}>
+                        Javascript
+                      </Text>
+                    </Row>
+                  </Col>
+                  <Col className='tech-list'>
+                    <Row>
+                      <img className='tech-list-img' src={react} alt='react' />
+                    </Row>
+                    <Row align='center' style={{ marginTop: '10px' }}>
+                      <Text className='text' style={{ fontSize: '20px' }}>
+                        React
+                      </Text>
+                    </Row>
+                  </Col>
+                  <Col className='tech-list'>
+                    <Row>
+                      <img
+                        className='tech-list-img'
+                        src={nodejs}
+                        alt='nodejs'
+                      />
+                    </Row>
+                    <Row align='center' style={{ marginTop: '10px' }}>
+                      <Text className='text' style={{ fontSize: '20px' }}>
+                        Node.js
+                      </Text>
+                    </Row>
+                  </Col>
+                </Row>
+              </Row>
+            </Col>
+          </Row>
+          <Row className='technology-container' align='center'>
+            <Col
+              xs={{ span: 20 }}
+              sm={{ span: 20 }}
+              md={{ span: 20 }}
+              lg={{ span: 16 }}
+              className='technology'
+            >
+              <Row>
+                <Title className='title'>HTML</Title>
+                <Divider style={{ margin: 0 }} />
+                <Row style={{ marginTop: 25 }}>
+                  <Col className='tech-list'>
+                    <Row>
+                      <img className='tech-list-img' src={html5} alt='html5' />
+                    </Row>
+                    <Row align='center' style={{ marginTop: '10px' }}>
+                      <Text className='text' style={{ fontSize: '20px' }}>
+                        HTML
+                      </Text>
+                    </Row>
+                  </Col>
+                  <Col className='tech-list'>
+                    <Row>
+                      <img className='tech-list-img' src={jsx} alt='jsx' />
+                    </Row>
+                    <Row align='center' style={{ marginTop: '10px' }}>
+                      <Text className='text' style={{ fontSize: '20px' }}>
+                        JSX
+                      </Text>
+                    </Row>
+                  </Col>
+                </Row>
               </Row>
             </Col>
           </Row>
