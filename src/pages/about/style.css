@@ -1,1 +1,92 @@
-/* stylelint-disable */
+/* stylelint-disable */.role {
+  overflow: hidden;
+  height: 37px;
+}
+
+.role_container {
+  margin-left: 7px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.role_container:before {
+  /* content: '['; */
+}
+
+.role_container:after {
+  /* content: ']'; */
+}
+
+.role_container:after,
+:before {
+  color: #16a085;
+  animation-name: opacity;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.role_container_list {
+  padding: 0px;
+  animation-name: change;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: alternate;
+  animation-fill-mode: both;
+}
+
+.role_container_list_item {
+  padding: 0;
+  list-style-type: none;
+}
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
+
+@keyframes change {
+  0% {
+    transform: translateY(0);
+  }
+  8.34% {
+    transform: translateY(0);
+  }
+  16.66% {
+    transform: translateY(-20%);
+  }
+  25% {
+    transform: translateY(-20%);
+  }
+  33.33% {
+    transform: translateY(-40%);
+  }
+  41.66% {
+    transform: translateY(-40%);
+  }
+  50% {
+    transform: translateY(-60%);
+  }
+  58.34% {
+    transform: translateY(-60%);
+  }
+  66.66% {
+    transform: translateY(-80%);
+  }
+  75% {
+    transform: translateY(-80%);
+  }
+  83.34% {
+    transform: translateY(-90%);
+  }
+  91.66% {
+    transform: translateY(10%);
+  }
+  /* 100% {
+    transform: translateY();
+  } */
+}
