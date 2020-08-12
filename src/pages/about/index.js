@@ -222,7 +222,10 @@ const About = () => {
                     <Divider style={{ margin: 0 }} />
                     <Col>
                       <Row>
-                        <Text className='text' style={{ fontStyle: 'italic' }}>
+                        <Text
+                          className='text'
+                          style={{ fontStyle: 'italic', marginTop: 25 }}
+                        >
                           SaaS platform that enables enterprise companies to
                           build, run, and measure their positive impact
                           campaigns
@@ -296,7 +299,10 @@ const About = () => {
                     <Divider style={{ margin: 0 }} />
                     <Col>
                       <Row>
-                        <Text className='text' style={{ fontStyle: 'italic' }}>
+                        <Text
+                          className='text'
+                          style={{ fontStyle: 'italic', marginTop: 25 }}
+                        >
                           SaaS platform that enables enterprise companies to
                           build, run, and measure their positive impact
                           campaigns
