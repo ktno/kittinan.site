@@ -10,11 +10,14 @@ const HeaderContainer = () => {
 
   useDocumentScrollThrottled(callbackData => {
     const { previousScrollTop, currentScrollTop } = callbackData
-    const isScrolledDown = previousScrollTop <= currentScrollTop
+    // const isScrolledDown = previousScrollTop <= currentScrollTop
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
 
     setTimeout(() => {
-      setShouldHideHeader(isScrolledDown && isMinimumScrolled)
+      setShouldHideHeader(
+        // isScrolledDown &&
+        isMinimumScrolled
+      )
     }, TIMEOUT_DELAY)
   })
 
