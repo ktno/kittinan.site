@@ -24,7 +24,10 @@ const Contact = () => {
                 <Col>
                   <Row align='middle'>
                     <a href='mailto:kittinan.ktt@gmail.com'>
-                      <MailTwoTone className='logo' twoToneColor='#d44638' />
+                      <MailTwoTone
+                        className='logo-contact'
+                        twoToneColor='#d44638'
+                      />
                       <Text className='text' style={{ marginLeft: 25 }}>
                         kittinan.ktt@gmail.com
                       </Text>
@@ -37,7 +40,7 @@ const Contact = () => {
                   <Row align='middle' style={{ marginTop: 10 }}>
                     <a href='https://github.com/ktno'>
                       <GithubFilled
-                        className='logo'
+                        className='logo-contact'
                         style={{ color: 'rgba(0, 0, 0, 0.65)' }}
                       />
                       <Text className='text' style={{ marginLeft: 25 }}>
@@ -57,7 +60,7 @@ const Contact = () => {
                   >
                     <a href='https://linkedin.com/in/kittinanounlum'>
                       <LinkedinFilled
-                        className='logo'
+                        className='logo-contact'
                         style={{ color: '#0e76a8' }}
                       />
                       <Text className='text' style={{ marginLeft: 25 }}>
