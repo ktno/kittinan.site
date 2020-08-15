@@ -139,7 +139,7 @@ const About = () => {
       position: 'Software Developer, Intern',
       responsibilities: [
         'Designed a RESTful API with Python and Flask.',
-        'Implemented a Google authenticaition service with OAuth2'
+        'Implemented a Google authenticaition service with OAuth2.'
       ],
       period: 'Jun 2018 - Jul 2018 | Bangkok, Thailand'
     }

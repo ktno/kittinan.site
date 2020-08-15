@@ -2,57 +2,55 @@ import React, { useState } from 'react'
 import { Row, Col, Typography } from 'antd'
 import Project from './Project'
 import ProjectModal from './ProjectModal'
-import react from '../../assets/images/react.png'
-import nodejs from '../../assets/images/nodejs.png'
-import nginx from '../../assets/images/nginx.png'
-import html5 from '../../assets/images/html5.png'
-import jsx from '../../assets/images/jsx.png'
+import * as images from '../../assets/images'
 import './style.css'
 
 const Projects = () => {
   const { Title } = Typography
   const projects = [
     {
-      title: 'Project A',
-      description: 'Description',
+      title: 'Kittinan.site',
+      description: 'A portfolio website to showcase my projects.',
       site: 'https://kittinan.site',
       source: 'https://github.com/ktno/kittinan.site',
-      techList: [react, nodejs, nginx]
+      techList: [
+        images.react,
+        images.nodejs,
+        images.nginx,
+        images.alibabacloud
+      ],
+      images: [
+        images.projectA1,
+        images.projectA2,
+        images.projectA3,
+        images.projectA4
+      ]
     },
     {
-      title: 'Project B',
-      description: 'Description',
-      site: 'https://kittinan.site',
-      source: 'https://github.com/ktno/kittinan.site',
-      techList: [react, nodejs]
+      title: 'Self Service Kiosk',
+      description:
+        'A prototype web application to demonstrate how to integrate with National Digital Identity platform.',
+      source: 'https://github.com/ktno/self-service-kiosk',
+      techList: [images.react, images.nodejs, images.expressjs],
+      images: [images.projectB1, images.projectB2, images.projectB3]
     },
     {
-      title: 'Project C',
-      description: 'Description',
-      site: 'https://kittinan.site',
-      source: 'https://github.com/ktno/kittinan.site',
-      techList: [html5, nodejs]
-    },
-    {
-      title: 'Project D',
-      description: 'Description',
-      site: 'https://kittinan.site',
-      source: 'https://github.com/ktno/kittinan.site',
-      techList: [nodejs]
+      title: 'Identity Authentication',
+      description:
+        'Authentication service using OpenID Connect in the Gluu server',
+      techList: [images.docker, images.nodejs, images.expressjs],
+      images: [images.projectC1, images.projectC2, images.projectC3]
     }
   ]
 
+  const [projectImages, setProjectImages] = useState([])
   const [buttonTypes, setButtonTypes] = useState({
     learnMore: 'default',
     viewSite: 'default',
     viewSource: 'default'
   })
   const [modalVisiblility, setModalVisibility] = useState(false)
-  const [modalContent, setModalContent] = useState({
-    description: '',
-    site: '#',
-    source: '#'
-  })
+  const [modalContent, setModalContent] = useState({})
 
   const handleMouseOverButton = button => {
     const className = { ...buttonTypes }
@@ -82,6 +80,7 @@ const Projects = () => {
                     handleMouseLeaveButton={handleMouseLeaveButton}
                     setModalVisibility={setModalVisibility}
                     setModalContent={setModalContent}
+                    setProjectImages={setProjectImages}
                   />
                 ))}
               </Row>
@@ -95,6 +94,7 @@ const Projects = () => {
           modalVisiblility={modalVisiblility}
           setModalVisibility={setModalVisibility}
           modalContent={modalContent}
+          projectImages={projectImages}
         />
       </Row>
     </Col>

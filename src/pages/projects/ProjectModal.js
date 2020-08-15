@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Row, Col, Modal, Skeleton, Carousel, Typography, Button } from 'antd'
+import { Row, Col, Modal, Carousel, Typography, Button } from 'antd'
 import {
   CloseCircleFilled,
   LeftCircleFilled,
@@ -11,6 +11,7 @@ import './style.css'
 
 const ProjectModal = props => {
   const {
+    projectImages,
     buttonTypes,
     handleMouseOverButton,
     handleMouseLeaveButton,
@@ -19,7 +20,6 @@ const ProjectModal = props => {
     modalContent
   } = props
   const { Title, Text } = Typography
-  const { Image } = Skeleton
   const carousel = useRef()
 
   const handleModalCancel = () => {
@@ -42,18 +42,11 @@ const ProjectModal = props => {
         autoplaySpeed={3000}
         ref={carousel}
       >
-        <Row>
-          <Image className='modal-img' src='' alt='project' />
-        </Row>
-        <Row>
-          <Image className='modal-img' src='' alt='project' />
-        </Row>
-        <Row>
-          <Image className='modal-img' src='' alt='project' />
-        </Row>
-        <Row>
-          <Image className='modal-img' src='' alt='project' />
-        </Row>
+        {projectImages.map(image => (
+          <Row key={image}>
+            <img className='modal-img' src={image} alt={image} />
+          </Row>
+        ))}
       </Carousel>
       <Row style={{ height: 45, position: 'relative', top: -60 }}>
         <Col span={12}>
@@ -92,28 +85,32 @@ const ProjectModal = props => {
             {modalContent.description}
           </Text>
           <Row style={{ marginTop: 25 }}>
-            <Button
-              className={buttonTypes.viewSite}
-              href={modalContent.site}
-              icon={<HomeOutlined />}
-              style={{ color: 'black', marginRight: 10 }}
-              onMouseOver={() => handleMouseOverButton('viewSite')}
-              onMouseLeave={() => handleMouseLeaveButton('viewSite')}
-            >
-              <Text className='text'>VIEW SITE</Text>
-            </Button>
-            <Button
-              className={buttonTypes.viewSource}
-              href={modalContent.source}
-              icon={<GithubOutlined />}
-              style={{
-                color: 'black'
-              }}
-              onMouseOver={() => handleMouseOverButton('viewSource')}
-              onMouseLeave={() => handleMouseLeaveButton('viewSource')}
-            >
-              <Text className='text'>VIEW SOURCE</Text>
-            </Button>
+            {modalContent.site && (
+              <Button
+                className={buttonTypes.viewSite}
+                href={modalContent.site}
+                icon={<HomeOutlined />}
+                style={{ color: 'black', marginRight: 10 }}
+                onMouseOver={() => handleMouseOverButton('viewSite')}
+                onMouseLeave={() => handleMouseLeaveButton('viewSite')}
+              >
+                <Text className='text'>VIEW SITE</Text>
+              </Button>
+            )}
+            {modalContent.source && (
+              <Button
+                className={buttonTypes.viewSource}
+                href={modalContent.source}
+                icon={<GithubOutlined />}
+                style={{
+                  color: 'black'
+                }}
+                onMouseOver={() => handleMouseOverButton('viewSource')}
+                onMouseLeave={() => handleMouseLeaveButton('viewSource')}
+              >
+                <Text className='text'>VIEW SOURCE</Text>
+              </Button>
+            )}
           </Row>
         </Col>
       </Row>

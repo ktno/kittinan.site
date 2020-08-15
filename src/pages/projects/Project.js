@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Row, Col, Typography, Skeleton, Button } from 'antd'
+import { Row, Col, Typography, Button } from 'antd'
 import './style.css'
 
 const Project = props => {
@@ -9,10 +9,10 @@ const Project = props => {
     handleMouseOverButton,
     handleMouseLeaveButton,
     setModalVisibility,
-    setModalContent
+    setModalContent,
+    setProjectImages
   } = props
   const { Title, Text } = Typography
-  const { Image } = Skeleton
 
   const [projectDetailOpacity, setProjectDetailOpacity] = useState(0)
 
@@ -23,10 +23,10 @@ const Project = props => {
     setProjectDetailOpacity(0)
   }
   const handleMouseClickLearnMore = () => {
-    const { ...content } = project
-
+    const { images, ...content } = project
     setModalVisibility(true)
     setModalContent(content)
+    setProjectImages(images)
   }
 
   return (
@@ -35,7 +35,11 @@ const Project = props => {
         <Col className='project' span={24}>
           <Row>
             <Col span={24}>
-              <Image className='project-img' src='' alt='project' />
+              <img
+                className='project-img'
+                src={project.images[0]}
+                alt={project.title}
+              />
               <Row
                 align='middle'
                 justify='center'
@@ -77,7 +81,7 @@ const Project = props => {
                     justify='space-around'
                   >
                     {project.techList.map(tech => (
-                      <Col className='tech-img-container' span={5}>
+                      <Col className='tech-img-container' span={5} key={tech}>
                         <img className='tech-img' src={tech} alt={tech}></img>
                       </Col>
                     ))}
