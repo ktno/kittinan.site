@@ -54,6 +54,7 @@ const About = () => {
                   <ul className='role_container_list'>
                     {roles.map(role => (
                       <li
+                        key={role}
                         className='role_container_list_item'
                         style={{ filter: 'drop-shadow(0 0 0.1rem black)' }}
                       >
@@ -248,7 +249,7 @@ const About = () => {
                           </li>
                           <li>
                             Tools: Ruby, Rails, PostgreSQL // React, JS, jQuery
-                            // Sass // HTML, JSX, Haml
+                            \// Sass // HTML, JSX, Haml
                           </li>
                         </ui>
                       </Row>
@@ -325,7 +326,7 @@ const About = () => {
                           </li>
                           <li>
                             Tools: Ruby, Rails, PostgreSQL // React, JS, jQuery
-                            // Sass // HTML, JSX, Haml
+                            \// Sass // HTML, JSX, Haml
                           </li>
                         </ui>
                       </Row>

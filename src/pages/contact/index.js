@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { contactAction } from '../../actions'
+import React from 'react'
 import { MailTwoTone, GithubFilled, LinkedinFilled } from '@ant-design/icons'
 import { Row, Col, Typography } from 'antd'
 import './style.css'

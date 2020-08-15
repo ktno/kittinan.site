@@ -19,7 +19,13 @@ const Header = () => {
         <Col span={1} offset={3}>
           <Avatar src='logo.png' size={55}></Avatar>
         </Col>
-        <Col span={5} offset={12}>
+        <Col
+          xs={{ span: 4 }}
+          sm={{ span: 4 }}
+          md={{ span: 2 }}
+          lg={{ span: 4 }}
+          offset={12}
+        >
           <Menu
             onClick={handleClick}
             mode='horizontal'

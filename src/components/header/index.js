@@ -9,6 +9,7 @@ const HeaderContainer = () => {
   const TIMEOUT_DELAY = 100
 
   useDocumentScrollThrottled(callbackData => {
+    // eslint-disable-next-line
     const { previousScrollTop, currentScrollTop } = callbackData
     // const isScrolledDown = previousScrollTop <= currentScrollTop
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
