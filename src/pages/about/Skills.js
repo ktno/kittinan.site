@@ -26,14 +26,18 @@ const Skills = props => {
                 <Row style={{ marginTop: 25 }}>
                   {skill.tech.map(tech => (
                     <Col className='tech-list'>
-                      <Row>
+                      <Row align='center' justify='center'>
                         <img
                           className='tech-list-img'
                           src={tech.image}
                           alt={tech.name}
                         />
                       </Row>
-                      <Row align='center' style={{ marginTop: '10px' }}>
+                      <Row
+                        align='center'
+                        justify='center'
+                        style={{ marginTop: '10px' }}
+                      >
                         <Text className='text' style={{ fontSize: '20px' }}>
                           {tech.name}
                         </Text>
