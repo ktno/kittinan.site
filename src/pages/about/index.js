@@ -24,6 +24,10 @@ const About = () => {
         {
           name: 'Node.js',
           image: images.nodejs
+        },
+        {
+          name: 'Expressjs',
+          image: images.expressjs
         }
       ]
     },
@@ -37,6 +41,80 @@ const About = () => {
         {
           name: 'JSX',
           image: images.jsx
+        }
+      ]
+    },
+    {
+      title: 'CSS',
+      tech: [
+        {
+          name: 'CSS3',
+          image: images.css3
+        },
+        {
+          name: 'Bootstrap',
+          image: images.bootstrap
+        },
+        {
+          name: 'Ant Design',
+          image: images.antdesign
+        }
+      ]
+    },
+    {
+      title: 'Database',
+      tech: [
+        {
+          name: 'MongoDB',
+          image: images.mongodb
+        },
+        {
+          name: 'Firebase',
+          image: images.firebase
+        }
+      ]
+    },
+    {
+      title: 'Container',
+      tech: [
+        {
+          name: 'Docker',
+          image: images.docker
+        }
+      ]
+    },
+    {
+      title: 'Cloud Platform',
+      tech: [
+        {
+          name: 'Google Cloud Platform',
+          image: images.googlecloudplatform
+        },
+        {
+          name: 'Alibaba Cloud',
+          image: images.alibabacloud
+        }
+      ]
+    },
+    {
+      title: 'Version Control',
+      tech: [
+        {
+          name: 'Github',
+          image: images.github
+        },
+        {
+          name: 'Source Tree',
+          image: images.sourcetree
+        }
+      ]
+    },
+    {
+      title: 'Wireframe',
+      tech: [
+        {
+          name: 'MockFlow',
+          image: images.mockflow
         }
       ]
     }
