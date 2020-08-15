@@ -8,6 +8,7 @@ import firebase from './firebase.png'
 import github from './github.png'
 import googlecloudplatform from './googlecloudplatform.png'
 import html5 from './html5.png'
+import expressjs from './expressjs.png'
 import javascript from './javascript.png'
 import jsx from './jsx.png'
 import kmitl from './kmitl.png'
@@ -32,6 +33,7 @@ export {
   github,
   googlecloudplatform,
   html5,
+  expressjs,
   javascript,
   jsx,
   kmitl,
