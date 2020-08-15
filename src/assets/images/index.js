@@ -21,6 +21,16 @@ import react from './react.png'
 import sourcetree from './sourcetree.png'
 import tangerine from './tangerine.png'
 import tuaton from './tuaton.png'
+import projectA1 from './projectA1.png'
+import projectA2 from './projectA2.png'
+import projectA3 from './projectA3.png'
+import projectA4 from './projectA4.png'
+import projectB1 from './projectB1.png'
+import projectB2 from './projectB2.png'
+import projectB3 from './projectB3.png'
+import projectC1 from './projectC1.png'
+import projectC2 from './projectC2.png'
+import projectC3 from './projectC3.png'
 
 export {
   alibabacloud,
@@ -45,5 +55,15 @@ export {
   react,
   sourcetree,
   tangerine,
-  tuaton
+  tuaton,
+  projectA1,
+  projectA2,
+  projectA3,
+  projectA4,
+  projectB1,
+  projectB2,
+  projectB3,
+  projectC1,
+  projectC2,
+  projectC3
 }
