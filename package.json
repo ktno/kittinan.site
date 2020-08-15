@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "kittinan.site",
   "version": "1.0.0",
-  "description": "React boilerplate for creating apps with React and Redux",
+  "description": "A portfolio website ",
   "engines": {
     "node": ">=10.13.0"
   },
@@ -19,9 +19,11 @@
   "author": "Kittinan",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ktno/react-boilerplate"
+    "url": "https://github.com/ktno/kittinan.site"
   },
   "keywords": [
+    "kittinan",
+    "portfolio",
     "react",
     "redux",
     "react-router",
