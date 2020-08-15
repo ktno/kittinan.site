@@ -123,30 +123,25 @@ const About = () => {
     {
       title: 'Tuaton Co.,Ltd.',
       image: images.tuaton,
-      description:
-        'SaaS platform that enables enterprise companies to build, run, and measure their positive impact campaigns',
+      position: 'Software Engineer',
       responsibilities: [
-        'Contribute core features across entire stack (20k+ lines of code, 250+ pulls)',
-        'Lead front-end development, creating and documenting app-wide design system',
-        'Oversee transition from page-based styles to modular component styles',
-        'Guide best practices around accessible, semantic UI/UX',
-        'Tools: Ruby, Rails, PostgreSQL // React, JS, jQuery // Sass // HTML, JSX, Haml'
+        'Designed APIs with Node.js and Expressjs.',
+        'Implemented web applications with HTML, CSS, and React.',
+        'Deployed and maintained APIs and web applications on Ubuntu server.',
+        'Guide best practices around accessible, semantic UI/UX.',
+        'Set up and maintained an identity server, Gluu.'
       ],
       period: 'Jun 2019 - Present | Bangkok, Thailand'
     },
     {
       title: 'Tangerine Co.,Ltd.',
       image: images.tangerine,
-      description:
-        'SaaS platform that enables enterprise companies to build, run, and measure their positive impact campaigns',
+      position: 'Software Developer, Intern',
       responsibilities: [
-        'Contribute core features across entire stack (20k+ lines of code, 250+ pulls)',
-        'Lead front-end development, creating and documenting app-wide design system',
-        'Oversee transition from page-based styles to modular component styles',
-        'Guide best practices around accessible, semantic UI/UX',
-        'Tools: Ruby, Rails, PostgreSQL // React, JS, jQuery // Sass // HTML, JSX, Haml'
+        'Designed a RESTful API with Python and Flask.',
+        'Implemented a Google authenticaition service with OAuth2'
       ],
-      period: 'Jun 2019 - Present | Bangkok, Thailand'
+      period: 'Jun 2018 - Jul 2018 | Bangkok, Thailand'
     }
   ]
   const education = [

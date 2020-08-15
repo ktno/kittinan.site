@@ -36,7 +36,7 @@ const Experience = props => {
                           className='text'
                           style={{ fontStyle: 'italic', marginTop: 25 }}
                         >
-                          {exp.description}
+                          {exp.position}
                         </Text>
                       </Row>
                       <Row>
