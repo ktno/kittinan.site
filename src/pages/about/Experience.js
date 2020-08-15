@@ -12,7 +12,7 @@ const Experience = props => {
       <Col span={24}>
         <Title className='heading'>Experience</Title>
         {experience.map(exp => (
-          <Row className='rectangle-container' align='center'>
+          <Row className='rectangle-container' align='center' key={exp.title}>
             <Col
               xs={{ span: 20 }}
               sm={{ span: 20 }}
@@ -50,7 +50,7 @@ const Experience = props => {
                       <Row>
                         <ul>
                           {exp.responsibilities.map(resp => (
-                            <li>{resp}</li>
+                            <li key={resp}>{resp}</li>
                           ))}
                         </ul>
                       </Row>

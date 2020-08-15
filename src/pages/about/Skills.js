@@ -12,7 +12,7 @@ const Skills = props => {
       <Col span={24}>
         <Title className='heading'>Skills</Title>
         {skills.map(skill => (
-          <Row className='rectangle-container' align='center'>
+          <Row className='rectangle-container' align='center' key={skill.title}>
             <Col
               xs={{ span: 20 }}
               sm={{ span: 20 }}
@@ -25,7 +25,7 @@ const Skills = props => {
                 <Divider style={{ margin: 0 }} />
                 <Row style={{ marginTop: 25 }}>
                   {skill.tech.map(tech => (
-                    <Col className='tech-list'>
+                    <Col className='tech-list' key={tech.name}>
                       <Row align='center' justify='center'>
                         <img
                           className='tech-list-img'

@@ -22,7 +22,7 @@ const Education = props => {
             <Row>
               <Col>
                 {education.map(edu => (
-                  <Row>
+                  <Row key={edu.title}>
                     <Row align='middle'>
                       <img className='logo' src={edu.image} alt='kmitl'></img>
                       <Title className='title' style={{ marginLeft: 10 }}>
