@@ -1,1 +1,73 @@
-/* stylelint-disable */
+.project {
+  min-height: 200px !important;
+}
+
+.project-container {
+  /* background-color: greenyellow; */
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 300px;
+  min-height: 200px !important;
+  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.2);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(207, 207, 196, 0.5);
+}
+
+.project-img {
+  width: 100% !important;
+  min-height: 200px !important;
+}
+
+.project-desc {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-align: start;
+}
+
+.tech-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-position: 50% 50%;
+  margin-left: 15px;
+}
+
+.tech-img:first-child {
+  margin-left: 0;
+}
+
+.modal-img {
+  width: 100% !important;
+  height: 450px !important;
+}
+
+.modal-footer {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
+/* override */
+.ant-modal-body {
+  padding: 0 !important;
+}
+
+/* override */
+.ant-modal-close-x {
+  width: 45px !important;
+  height: 45px !important;
+  font-size: 40px !important;
+  color: rgba(69, 178, 154, 1);
+}
+
+/* override */
+.ant-modal-close {
+  top: unset !important;
+  bottom: 10px !important;
+  right: 5px !important;
+}
