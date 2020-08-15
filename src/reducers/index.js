@@ -1,5 +1,5 @@
-import * as aboutReducer from './aboutReducer'
-import * as projectsReducer from './projectsReducer'
-import * as contactReducer from './contactReducer'
+import aboutReducer from './aboutReducer'
+import projectsReducer from './projectsReducer'
+import contactReducer from './contactReducer'
 
 export { aboutReducer, projectsReducer, contactReducer }

@@ -1,9 +1,11 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import * as reducers from './reducers'
+import { aboutReducer, projectsReducer, contactReducer } from './reducers'
 
 const rootReducer = combineReducers({
-  reducers
+  aboutReducer,
+  projectsReducer,
+  contactReducer
 })
 
 const composeEnhancers =
