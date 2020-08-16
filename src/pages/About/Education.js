@@ -23,11 +23,19 @@ const Education = props => {
               <Col>
                 {education.map(edu => (
                   <Row key={edu.title}>
-                    <Row align='middle'>
-                      <img className='logo' src={edu.image} alt='kmitl'></img>
-                      <Title className='title' style={{ marginLeft: 10 }}>
-                        {edu.title}
-                      </Title>
+                    <Row
+                      align='middle'
+                      justify='start'
+                      style={{ width: '100%' }}
+                    >
+                      <Col span={2} style={{ minWidth: 50 }}>
+                        <img className='logo' src={edu.image} alt='kmitl'></img>
+                      </Col>
+                      <Col span={16}>
+                        <Title className='title rectangle-title'>
+                          {edu.title}
+                        </Title>
+                      </Col>
                     </Row>
                     <Divider style={{ margin: 0 }} />
                     <Col>

@@ -23,11 +23,23 @@ const Experience = props => {
               <Row>
                 <Col>
                   <Row>
-                    <Row align='middle'>
-                      <img className='logo' src={exp.image} alt='tuaton'></img>
-                      <Title className='title' style={{ marginLeft: 10 }}>
-                        {exp.title}
-                      </Title>
+                    <Row
+                      align='middle'
+                      justify='start'
+                      style={{ width: '100%' }}
+                    >
+                      <Col span={2} style={{ minWidth: 50 }}>
+                        <img
+                          className='logo'
+                          src={exp.image}
+                          alt={exp.title}
+                        ></img>
+                      </Col>
+                      <Col span={12}>
+                        <Title className='title rectangle-title'>
+                          {exp.title}
+                        </Title>
+                      </Col>
                     </Row>
                     <Divider style={{ margin: 0 }} />
                     <Col>
