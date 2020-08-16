@@ -1,5 +1,5 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ktno/kittinan.site)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/ktno/react)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/ktno/kittinan.site)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![GitHub](https://img.shields.io/github/license/ktno/kittinan.site)
 
