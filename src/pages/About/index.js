@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Typography, Avatar, Divider } from 'antd'
+import { Row, Col, Typography, Avatar } from 'antd'
 import Skills from './Skills'
 import Experience from './Experience'
 import Education from './Education'
