@@ -1,5 +1,6 @@
 import React from 'react'
 import { Row, Col, Typography, Avatar } from 'antd'
+import ProgressiveImage from 'react-progressive-graceful-image'
 import Skills from './Skills'
 import Experience from './Experience'
 import Education from './Education'
@@ -155,17 +156,28 @@ const About = () => {
   return (
     <Col className='content'>
       {/* first section - welcome */}
-      <div
-        style={{
-          backgroundImage: `url(${images.cover})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          height: 'calc(100vh - 400px)'
-        }}
-      >
-        <Row className='section' align='middle' justify='center'>
-          <Col span={24}>
+      <Row className='section' align='middle' justify='center'>
+        <ProgressiveImage src={images.cover} placeholder={images.cover}>
+          {(src, loading) => (
+            <img
+              src={src}
+              alt={src}
+              style={{
+                height: 'calc(100vh - 400px)',
+                width: '100%',
+                objectFit: 'cover',
+                backgroundPosition: '50% 50%',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                filter: loading ? 'blur(10px)' : 'blur(0)',
+                transition: '1s filter linear'
+              }}
+            />
+          )}
+        </ProgressiveImage>
+        <Col span={24}>
+          <Row align='middle' justify='center'>
             <Title
               className='headline'
               style={{
@@ -175,35 +187,35 @@ const About = () => {
             >
               I'm Kittinan.
             </Title>
-            <Row align='middle' justify='center'>
-              <Paragraph
-                className='subheading'
-                style={{
-                  marginBottom: 0,
-                  filter: 'drop-shadow(0 0 0.1rem black)'
-                }}
-              >
-                And I'm a
-              </Paragraph>
-              <div className='role subheading'>
-                <div className='role_container'>
-                  <ul className='role_container_list'>
-                    {roles.map(role => (
-                      <li
-                        key={role}
-                        className='role_container_list_item'
-                        style={{ filter: 'drop-shadow(0 0 0.1rem black)' }}
-                      >
-                        {role}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          </Row>
+          <Row align='middle' justify='center'>
+            <Paragraph
+              className='subheading'
+              style={{
+                marginBottom: 0,
+                filter: 'drop-shadow(0 0 0.1rem black)'
+              }}
+            >
+              And I'm a
+            </Paragraph>
+            <div className='role subheading'>
+              <div className='role_container'>
+                <ul className='role_container_list'>
+                  {roles.map(role => (
+                    <li
+                      key={role}
+                      className='role_container_list_item'
+                      style={{ filter: 'drop-shadow(0 0 0.1rem black)' }}
+                    >
+                      {role}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </Row>
-          </Col>
-        </Row>
-      </div>
+            </div>
+          </Row>
+        </Col>
+      </Row>
       {/* second section - introduction */}
       <Row className='section' align='middle' justify='center'>
         <Col style={{ maxWidth: '390px' }}>
