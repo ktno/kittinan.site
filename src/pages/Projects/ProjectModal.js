@@ -7,6 +7,7 @@ import {
   HomeOutlined,
   GithubOutlined
 } from '@ant-design/icons'
+import ProgressiveImage from 'react-progressive-graceful-image'
 import './style.css'
 
 const ProjectModal = props => {
@@ -44,7 +45,19 @@ const ProjectModal = props => {
       >
         {projectImages.map(image => (
           <Row key={image}>
-            <img className='modal-img' src={image} alt={image} />
+            <ProgressiveImage src={image} placeholder={image}>
+              {(src, loading) => (
+                <img
+                  className='modal-img'
+                  src={src}
+                  alt={image}
+                  style={{
+                    filter: loading ? 'blur(10px)' : 'blur(0)',
+                    transition: '1s filter linear'
+                  }}
+                />
+              )}
+            </ProgressiveImage>
           </Row>
         ))}
       </Carousel>

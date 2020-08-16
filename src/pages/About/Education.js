@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Typography, Divider } from 'antd'
-import {} from '@ant-design/icons'
+import ProgressiveImage from 'react-progressive-graceful-image'
 import './style.css'
 
 const Education = props => {
@@ -29,7 +29,22 @@ const Education = props => {
                       style={{ width: '100%' }}
                     >
                       <Col span={2} style={{ minWidth: 50 }}>
-                        <img className='logo' src={edu.image} alt='kmitl'></img>
+                        <ProgressiveImage
+                          src={edu.image}
+                          placeholder={edu.image}
+                        >
+                          {(src, loading) => (
+                            <img
+                              className='logo'
+                              src={src}
+                              alt={edu.title}
+                              style={{
+                                filter: loading ? 'blur(10px)' : 'blur(0)',
+                                transition: '1s filter linear'
+                              }}
+                            />
+                          )}
+                        </ProgressiveImage>
                       </Col>
                       <Col span={16}>
                         <Title className='title rectangle-title'>

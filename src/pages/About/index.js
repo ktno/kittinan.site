@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Row, Col, Typography, Avatar } from 'antd'
 import ProgressiveImage from 'react-progressive-graceful-image'
-import Skills from './Skills'
-import Experience from './Experience'
-import Education from './Education'
 import * as images from '../../assets/images'
 import './style.css'
 
 const About = () => {
+  const Skills = lazy(() => import('./Skills'))
+  const Experience = lazy(() => import('./Experience'))
+  const Education = lazy(() => import('./Education'))
+
   const { Title, Paragraph } = Typography
   const roles = ['developer', 'learner', 'dreamer', 'gamer', 'cat lover']
   const skills = [
@@ -220,7 +221,18 @@ const About = () => {
       <Row className='section' align='middle' justify='center'>
         <Col style={{ maxWidth: '390px' }}>
           <Row align='middle' justify='center'>
-            <Avatar src={images.profile} size={140} />
+            <ProgressiveImage src={images.profile} placeholder={images.profile}>
+              {(src, loading) => (
+                <Avatar
+                  src={src}
+                  size={140}
+                  style={{
+                    filter: loading ? 'blur(10px)' : 'blur(0)',
+                    transition: '1s filter linear'
+                  }}
+                />
+              )}
+            </ProgressiveImage>
           </Row>
           <Row style={{ marginTop: '50px' }}>
             <Col>
@@ -241,11 +253,17 @@ const About = () => {
         </Col>
       </Row>
       {/* third section - skills */}
-      <Skills skills={skills} />
+      <Suspense fallback={<div />}>
+        <Skills skills={skills} />
+      </Suspense>
       {/* fourth section - experience */}
-      <Experience experience={experience} />
+      <Suspense fallback={<div />}>
+        <Experience experience={experience} />
+      </Suspense>
       {/* fifth section - education */}
-      <Education education={education} />
+      <Suspense fallback={<div />}>
+        <Education education={education} />
+      </Suspense>
     </Col>
   )
 }

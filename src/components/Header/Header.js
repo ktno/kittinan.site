@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import { Row, Col, Avatar, Menu } from 'antd'
+import ProgressiveImage from 'react-progressive-graceful-image'
 import './style.css'
 
 const Header = () => {
@@ -17,7 +18,18 @@ const Header = () => {
     <>
       <Row className='header' align='middle'>
         <Col span={1} offset={3}>
-          <Avatar src='logo.png' size={55}></Avatar>
+          <ProgressiveImage src='logo.png' placeholder='logo.png'>
+            {(src, loading) => (
+              <Avatar
+                src={src}
+                size={55}
+                style={{
+                  filter: loading ? 'blur(10px)' : 'blur(0)',
+                  transition: '1s filter linear'
+                }}
+              ></Avatar>
+            )}
+          </ProgressiveImage>
         </Col>
         <Col
           xs={{ span: 4 }}

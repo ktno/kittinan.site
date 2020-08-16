@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Typography, Divider } from 'antd'
-import {} from '@ant-design/icons'
+import ProgressiveImage from 'react-progressive-graceful-image'
 import './style.css'
 
 const Skills = props => {
@@ -27,11 +27,22 @@ const Skills = props => {
                   {skill.tech.map(tech => (
                     <Col className='tech-list' key={tech.name}>
                       <Row align='center' justify='center'>
-                        <img
-                          className='tech-list-img'
+                        <ProgressiveImage
                           src={tech.image}
-                          alt={tech.name}
-                        />
+                          placeholder={tech.image}
+                        >
+                          {(src, loading) => (
+                            <img
+                              className='tech-list-img'
+                              src={src}
+                              alt={tech.name}
+                              style={{
+                                filter: loading ? 'blur(10px)' : 'blur(0)',
+                                transition: '1s filter linear'
+                              }}
+                            />
+                          )}
+                        </ProgressiveImage>
                       </Row>
                       <Row
                         align='center'

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Row, Col, Typography, Button } from 'antd'
+import ProgressiveImage from 'react-progressive-graceful-image'
 import './style.css'
 
 const Project = props => {
@@ -35,11 +36,22 @@ const Project = props => {
         <Col className='project' span={24}>
           <Row>
             <Col span={24}>
-              <img
-                className='project-img'
+              <ProgressiveImage
                 src={project.images[0]}
-                alt={project.title}
-              />
+                placeholder={project.images[0]}
+              >
+                {(src, loading) => (
+                  <img
+                    className='project-img'
+                    src={src}
+                    alt={project.title}
+                    style={{
+                      filter: loading ? 'blur(10px)' : 'blur(0)',
+                      transition: '1s filter linear'
+                    }}
+                  />
+                )}
+              </ProgressiveImage>
               <Row
                 align='middle'
                 justify='center'
@@ -82,7 +94,19 @@ const Project = props => {
                   >
                     {project.techList.map(tech => (
                       <Col className='tech-img-container' span={5} key={tech}>
-                        <img className='tech-img' src={tech} alt={tech}></img>
+                        <ProgressiveImage src={tech} placeholder={tech}>
+                          {(src, loading) => (
+                            <img
+                              className='tech-img'
+                              src={src}
+                              alt={tech}
+                              style={{
+                                filter: loading ? 'blur(10px)' : 'blur(0)',
+                                transition: '1s filter linear'
+                              }}
+                            />
+                          )}
+                        </ProgressiveImage>
                       </Col>
                     ))}
                   </Row>
