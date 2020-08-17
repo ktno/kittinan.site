@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy, useState, useEffect } from 'react'
 import { Row, Col, Typography, Avatar } from 'antd'
 import ProgressiveImage from 'react-progressive-graceful-image'
 import * as images from '../../assets/images'
@@ -154,6 +154,18 @@ const About = () => {
     }
   ]
 
+  const [height, setHeight] = useState('calc(100vh - 400px)')
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerHeight > window.innerWidth)
+        setHeight('calc(100vh - 400px)')
+      else setHeight('calc(100vh - 150px)')
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <Col className='content'>
       {/* first section - welcome */}
@@ -161,16 +173,11 @@ const About = () => {
         <ProgressiveImage src={images.cover} placeholder={images.cover}>
           {(src, loading) => (
             <img
+              className='cover-img'
               src={src}
               alt={src}
               style={{
-                height: 'calc(100vh - 400px)',
-                width: '100%',
-                objectFit: 'cover',
-                backgroundPosition: '50% 50%',
-                position: 'absolute',
-                top: 0,
-                left: 0,
+                height: height,
                 filter: loading ? 'blur(10px)' : 'blur(0)',
                 transition: '1s filter linear'
               }}

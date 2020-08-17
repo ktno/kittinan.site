@@ -13,12 +13,7 @@ const Projects = () => {
       description: 'A portfolio website to showcase my projects.',
       site: 'https://kittinan.site',
       source: 'https://github.com/ktno/kittinan.site',
-      techList: [
-        images.react,
-        images.nodejs,
-        images.nginx,
-        images.alibabacloud
-      ],
+      techList: [images.react, images.nodejs, images.alibabacloud],
       images: [
         images.projectA1,
         images.projectA2,
